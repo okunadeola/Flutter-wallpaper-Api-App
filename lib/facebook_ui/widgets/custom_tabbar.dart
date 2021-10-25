@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+
 import 'package:newapp/facebook_ui/config/palette.dart';
 
 class CustomTabBar extends StatelessWidget {
   final List<IconData>? icons;
   final int? selectedIndex;
+  final bool ? isBottomIndicator;
   final Function(int)? onTap;
 
   const CustomTabBar({
@@ -11,6 +13,7 @@ class CustomTabBar extends StatelessWidget {
     @required this.icons,
     @required this.selectedIndex,
     @required this.onTap,
+    this.isBottomIndicator = false,
   }) : super(key: key);
 
   @override
@@ -18,7 +21,11 @@ class CustomTabBar extends StatelessWidget {
     return TabBar(
       indicatorPadding: EdgeInsets.zero,
       indicator: BoxDecoration(
-        border: Border(
+        border: isBottomIndicator! ? Border(
+            bottom: BorderSide(
+          color: Palette.facebookBlue,
+          width: 3.0,
+        )) :Border(
             top: BorderSide(
           color: Palette.facebookBlue,
           width: 3.0,

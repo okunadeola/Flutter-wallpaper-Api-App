@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:newapp/facebook_ui/config/palette.dart';
 
+
 import 'package:newapp/facebook_ui/models/models.dart';
 import 'package:newapp/facebook_ui/widgets/widgets.dart';
 
@@ -9,6 +10,7 @@ class CustomAppBar extends StatelessWidget {
   final List<IconData>? icons;
   final int? selectedIndex;
   final Function(int)? onTap;
+  
   const CustomAppBar({
     Key? key,
     @required this.currentUser,
@@ -42,17 +44,23 @@ class CustomAppBar extends StatelessWidget {
                 )),
           ),
               Container(
+                height: double.infinity,
                 width: 600.0,
                 child: CustomTabBar(
                       icons: icons,
                       selectedIndex: selectedIndex,
-                      onTap: onTap),
+                      onTap: onTap,
+                      isBottomIndicator: true,
+                      ),
                 ),
                 Expanded(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      
+                      UserCard(user:currentUser),
+                      const SizedBox(width:12.0),
+                      CircleButton(icon: Icons.search, iconSize: 30.0, onPressed: (){}),
+                      CircleButton(icon: Icons.facebook, iconSize: 30.0, onPressed: (){}),
                     ],
                   )
                 

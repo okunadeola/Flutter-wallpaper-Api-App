@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:newapp/facebook_ui/config/palette.dart';
-// import 'package:newapp/facebook_ui/screens/home_screen.dart';
 import 'package:newapp/facebook_ui/screens/screens.dart';
 
 class Facebook extends StatelessWidget {
