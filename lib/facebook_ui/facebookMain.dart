@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:newapp/facebook_ui/config/palette.dart';
 import 'package:newapp/facebook_ui/screens/screens.dart';
 
+
+// the entry point to the facebook ui
 class Facebook extends StatelessWidget {
   const Facebook({Key? key}) : super(key: key);
 
@@ -14,7 +16,7 @@ class Facebook extends StatelessWidget {
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
           scaffoldBackgroundColor: Palette.scaffold),
-      home: NavigationScreen(),
+      home: NavigationScreen(),  //the 
     );
   }
 }
