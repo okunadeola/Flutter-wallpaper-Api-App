@@ -31,7 +31,8 @@
 .pub/
 /build/
 /lib/assignments
-/lib/walletApp
+/lib/facebook_ui
+/lib/wallpaperApp/env.dart
 
 # Web related
 lib/generated_plugin_registrant.dart
