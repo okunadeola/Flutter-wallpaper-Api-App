@@ -30,9 +30,10 @@
 .pub-cache/
 .pub/
 /build/
+/lib/facebook
 /lib/assignments
-/lib/facebook_ui
 /lib/wallpaperApp/env.dart
+/lib/wallpaperApp
 
 # Web related
 lib/generated_plugin_registrant.dart
